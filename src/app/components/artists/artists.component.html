@@ -1,0 +1,25 @@
+    <div *ngIf="artist">
+      <h1>{{ artist.name }}</h1>
+
+      <p>
+        <img src="{{ artist.images[0].url }}" class="img-responsive" style="max-height:300px;max-width:300px">
+      </p>
+      <ul class="list-group">
+        <a *ngFor="let item of albums" [routerLink]="['/albums',item.id]" class="list-group-item clearfix">
+
+          <span class="pull-left">
+            <img src="{{item.images[0].url}}" class="img-responsive" style="max-height:100px;max-width:60px">
+          </span>
+          <div class="pull-right">
+            <h4 class="list-group-item-heading pull-right">{{item.name}}</h4>
+            <br>
+            <div class="pull-right">
+                <span class="list-group-item-text ">Release Date:{{item.release_date}}</span>
+              <br>
+              <span class="list-group-item-text pull-right ">Total Tracks:{{item.total_tracks}}</span>
+            </div>
+          </div>
+        </a>
+      </ul>
+      <p><a href (click)="back()">Back</a></p>
+    </div>
