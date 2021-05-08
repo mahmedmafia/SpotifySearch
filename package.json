@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
     "bootstrap": "^3.4.1",
-    "handlebars": "^4.7.1",
+    "handlebars": "^4.7.7",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
